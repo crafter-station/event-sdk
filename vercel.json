@@ -1,6 +1,6 @@
 {
-	"buildCommand": "bun run build && cd apps/demo && bunx next build",
-	"outputDirectory": "apps/demo/.next",
+	"buildCommand": "bun run build && cd apps/template && bunx next build",
+	"outputDirectory": "apps/template/.next",
 	"installCommand": "bun install",
 	"framework": "nextjs"
 }

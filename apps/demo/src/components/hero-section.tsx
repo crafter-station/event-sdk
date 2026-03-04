@@ -158,40 +158,49 @@ export function HeroSection({
 					scrollbarWidth: "none",
 				}}
 			>
-				{TEAM.map((t, i) => (
-					<button
-						key={t.name}
-						type="button"
-						onClick={() => setSelectedMember(i)}
-						style={{
-							flexShrink: 0,
-							cursor: "pointer",
-							border: "none",
-							background: "none",
-							padding: 0,
-							opacity: selectedMember === i ? 1 : 0.5,
-							transition: "opacity 0.3s ease, transform 0.3s ease",
-							transform: selectedMember === i ? "scale(1)" : "scale(0.92)",
-						}}
-					>
-						<BadgeCard
-							name={t.name}
-							role={roles[t.role % roles.length]?.displayName ?? "Attendee"}
-							organization="Crafter Station"
-							badgeNumber={String(i + 1).padStart(3, "0")}
-							photoUrl={t.photo}
-							particleColors={[accent, secondary]}
+				{TEAM.map((t, i) => {
+					const scale = 0.44;
+					const cardW = 320;
+					const cardH = cardW * (4 / 3);
+					return (
+						<button
+							key={t.name}
+							type="button"
+							onClick={() => setSelectedMember(i)}
 							style={{
-								width: 140,
-								...themeStyles.card,
-								boxShadow:
-									selectedMember === i
-										? `0 0 20px ${accent}20`
-										: (themeStyles.card.boxShadow ?? "none"),
+								flexShrink: 0,
+								cursor: "pointer",
+								border: "none",
+								background: "none",
+								padding: 0,
+								width: cardW * scale,
+								height: cardH * scale,
+								opacity: selectedMember === i ? 1 : 0.5,
+								transition: "opacity 0.3s ease, transform 0.3s ease",
+								transform: selectedMember === i ? "scale(1)" : "scale(0.92)",
 							}}
-						/>
-					</button>
-				))}
+						>
+							<BadgeCard
+								name={t.name}
+								role={roles[t.role % roles.length]?.displayName ?? "Attendee"}
+								organization="Crafter Station"
+								badgeNumber={String(i + 1).padStart(3, "0")}
+								photoUrl={t.photo}
+								particleColors={[accent, secondary]}
+								style={{
+									width: cardW,
+									transformOrigin: "top left",
+									transform: `scale(${scale})`,
+									...themeStyles.card,
+									boxShadow:
+										selectedMember === i
+											? `0 0 20px ${accent}20`
+											: (themeStyles.card.boxShadow ?? "none"),
+								}}
+							/>
+						</button>
+					);
+				})}
 			</div>
 
 			<div className="fade-in fade-in-4" style={{ display: "flex", gap: 8, marginTop: 24 }}>

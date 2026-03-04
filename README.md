@@ -2,8 +2,6 @@
 
 Open-source event platform SDK. Clone, edit one config file, deploy.
 
-**Zero open-source hackathon platforms exist. We're building the first.**
-
 ## Packages
 
 | Package | Description |
@@ -27,7 +25,7 @@ bun install
 $EDITOR apps/template/event.config.ts
 
 # Run
-cd apps/template && bun dev
+bun run build && cd apps/template && bun dev
 ```
 
 ## `event.config.ts`
@@ -59,7 +57,7 @@ export default defineEvent({
     community: { whatsappUrl: "...", discordUrl: "..." },
     badges: true,
     i18n: true,
-    deck: true, // scroll-snap sponsor pitch deck at /deck
+    deck: true,
   },
 });
 ```
@@ -71,18 +69,15 @@ export default defineEvent({
 | `/` | Landing page (hero, countdown, sponsors, speakers, schedule, FAQ) |
 | `/speakers` | Speaker grid with bios |
 | `/schedule` | Full multi-day agenda |
-| `/sponsors` | Tiered sponsor showcase + "Become a Sponsor" CTA |
+| `/sponsors` | Tiered sponsor showcase |
 | `/jobs` | Job board from sponsor companies |
 | `/judges` | Judge grid with expertise tags |
 | `/faq` | Accordion FAQ |
-| `/deck` | Full-screen scroll-snap sponsor pitch deck |
-
-## `/deck` — The Differentiator
-
-Full-screen scroll-snap presentation for sponsors. CSS-only, no JS framework.
-7 slides: Cover, Opportunity, Audience, Tiers, Benefits, Past Sponsors, Contact.
-
-Content comes from `event.config.ts`. No one else has this.
+| `/deck` | Scroll-snap sponsor pitch deck |
+| `/badge` | Badge generator with 3D preview |
+| `/register` | Multi-step registration |
+| `/submit` | Hackathon project submission |
+| `/submissions` | Project gallery |
 
 ## Stack
 
@@ -96,13 +91,6 @@ Content comes from `event.config.ts`. No one else has this.
 | 3D | Three.js, React Three Fiber, Rapier |
 | Lint | Biome |
 
-## Why
-
-- Every hackathon platform is closed-source SaaS (Devpost, DoraHacks, MLH)
-- Vercel's virtual-event-starter-kit is dead (Pages Router, CSS Modules, 2020)
-- No platform combines conference + hackathon + sponsor pitch deck
-- LATAM is completely unserved (no bilingual, no WhatsApp, no MercadoPago)
-
 ## License
 
-MIT
+AGPL-3.0

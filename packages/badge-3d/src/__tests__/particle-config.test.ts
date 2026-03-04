@@ -1,5 +1,9 @@
 import { describe, expect, test } from "bun:test";
-import { capConfigForMobile, defaultParticleConfig, particleConfigSchema } from "../particle-config";
+import {
+	capConfigForMobile,
+	defaultParticleConfig,
+	particleConfigSchema,
+} from "../particle-config";
 
 describe("particleConfigSchema", () => {
 	test("validates default config", () => {

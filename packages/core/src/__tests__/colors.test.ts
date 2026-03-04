@@ -1,5 +1,12 @@
 import { describe, expect, test } from "bun:test";
-import { hexToRgb, lighten, luminance, pickAccentColor, pickReadableColor, saturation } from "../colors";
+import {
+	hexToRgb,
+	lighten,
+	luminance,
+	pickAccentColor,
+	pickReadableColor,
+	saturation,
+} from "../colors";
 
 describe("hexToRgb", () => {
 	test("parses standard hex", () => {

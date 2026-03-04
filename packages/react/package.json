@@ -1,43 +1,43 @@
 {
-  "name": "@event-sdk/react",
-  "version": "0.0.1",
-  "type": "module",
-  "main": "./src/index.ts",
-  "exports": {
-    ".": {
-      "bun": "./src/index.ts",
-      "types": "./dist/index.d.ts",
-      "import": "./dist/index.js"
-    }
-  },
-  "scripts": {
-    "build": "tsup",
-    "test": "bun test"
-  },
-  "dependencies": {
-    "@event-sdk/core": "workspace:*",
-    "@event-sdk/badge-3d": "workspace:*"
-  },
-  "peerDependencies": {
-    "react": ">=18",
-    "react-dom": ">=18",
-    "three": ">=0.160",
-    "@react-three/fiber": ">=9",
-    "@react-three/drei": ">=10",
-    "@react-three/rapier": ">=2",
-    "meshline": ">=3"
-  },
-  "peerDependenciesMeta": {
-    "three": { "optional": true },
-    "@react-three/fiber": { "optional": true },
-    "@react-three/drei": { "optional": true },
-    "@react-three/rapier": { "optional": true },
-    "meshline": { "optional": true }
-  },
-  "devDependencies": {
-    "@types/react": "^19",
-    "@types/react-dom": "^19",
-    "tsup": "^8.4.0",
-    "typescript": "^5.8.3"
-  }
+	"name": "@event-sdk/react",
+	"version": "0.0.1",
+	"type": "module",
+	"main": "./src/index.ts",
+	"exports": {
+		".": {
+			"bun": "./src/index.ts",
+			"types": "./dist/index.d.ts",
+			"import": "./dist/index.js"
+		}
+	},
+	"scripts": {
+		"build": "tsup",
+		"test": "bun test"
+	},
+	"dependencies": {
+		"@event-sdk/core": "workspace:*",
+		"@event-sdk/badge-3d": "workspace:*"
+	},
+	"peerDependencies": {
+		"react": ">=18",
+		"react-dom": ">=18",
+		"three": ">=0.160",
+		"@react-three/fiber": ">=9",
+		"@react-three/drei": ">=10",
+		"@react-three/rapier": ">=2",
+		"meshline": ">=3"
+	},
+	"peerDependenciesMeta": {
+		"three": { "optional": true },
+		"@react-three/fiber": { "optional": true },
+		"@react-three/drei": { "optional": true },
+		"@react-three/rapier": { "optional": true },
+		"meshline": { "optional": true }
+	},
+	"devDependencies": {
+		"@types/react": "^19",
+		"@types/react-dom": "^19",
+		"tsup": "^8.4.0",
+		"typescript": "^5.8.3"
+	}
 }

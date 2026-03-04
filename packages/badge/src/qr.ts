@@ -1,10 +1,7 @@
 import QRCode from "qrcode";
 import type { QRCodeOptions } from "./types";
 
-export async function generateQRCode(
-	url: string,
-	options: QRCodeOptions = {},
-): Promise<Buffer> {
+export async function generateQRCode(url: string, options: QRCodeOptions = {}): Promise<Buffer> {
 	const {
 		width = 180,
 		margin = 0,

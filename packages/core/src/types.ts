@@ -127,7 +127,14 @@ export interface SponsorConfig {
 }
 
 export interface DeckSlideConfig {
-	variant: "cover" | "opportunity" | "audience" | "tiers" | "benefits" | "past-sponsors" | "contact";
+	variant:
+		| "cover"
+		| "opportunity"
+		| "audience"
+		| "tiers"
+		| "benefits"
+		| "past-sponsors"
+		| "contact";
 	title?: string;
 	content?: string;
 	image?: string;

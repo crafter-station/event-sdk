@@ -1,5 +1,5 @@
-import type { EventConfig } from "./types";
 import { createEventIdentity } from "./factory";
+import type { EventConfig } from "./types";
 
 type DefineEventInput = Partial<EventConfig> & Pick<EventConfig, "name" | "slug" | "type">;
 

@@ -1,28 +1,28 @@
 {
-  "name": "@event-sdk/template",
-  "version": "0.0.1",
-  "private": true,
-  "scripts": {
-    "dev": "next dev --turbopack",
-    "build": "next build",
-    "start": "next start"
-  },
-  "dependencies": {
-    "@event-sdk/core": "workspace:*",
-    "@event-sdk/db": "workspace:*",
-    "@event-sdk/i18n": "workspace:*",
-    "@event-sdk/ui": "workspace:*",
-    "@event-sdk/badge-3d": "workspace:*",
-    "@event-sdk/react": "workspace:*",
-    "next": "^15.2.0",
-    "react": "^19.0.0",
-    "react-dom": "^19.0.0"
-  },
-  "devDependencies": {
-    "@types/react": "^19",
-    "@types/react-dom": "^19",
-    "typescript": "^5.8.3",
-    "@tailwindcss/postcss": "^4.1.0",
-    "tailwindcss": "^4.1.0"
-  }
+	"name": "@event-sdk/template",
+	"version": "0.0.1",
+	"private": true,
+	"scripts": {
+		"dev": "next dev --turbopack",
+		"build": "next build",
+		"start": "next start"
+	},
+	"dependencies": {
+		"@event-sdk/core": "workspace:*",
+		"@event-sdk/db": "workspace:*",
+		"@event-sdk/i18n": "workspace:*",
+		"@event-sdk/ui": "workspace:*",
+		"@event-sdk/badge-3d": "workspace:*",
+		"@event-sdk/react": "workspace:*",
+		"next": "^15.2.0",
+		"react": "^19.0.0",
+		"react-dom": "^19.0.0"
+	},
+	"devDependencies": {
+		"@types/react": "^19",
+		"@types/react-dom": "^19",
+		"typescript": "^5.8.3",
+		"@tailwindcss/postcss": "^4.1.0",
+		"tailwindcss": "^4.1.0"
+	}
 }

@@ -28,9 +28,7 @@ export const particleGroupSchema = z.object({
 		.describe("Glass transmission (0=opaque, 0.5-0.9=liquid/glass look)"),
 	fluid: z
 		.boolean()
-		.describe(
-			"Enable fluid physics: cohesion (surface tension) + viscosity for liquid behavior",
-		),
+		.describe("Enable fluid physics: cohesion (surface tension) + viscosity for liquid behavior"),
 });
 
 export const particleConfigSchema = z.object({

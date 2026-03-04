@@ -1,5 +1,5 @@
 import { describe, expect, test } from "bun:test";
-import { stepParticles, type SimParams, type SimState } from "../particle-sim";
+import { type SimParams, type SimState, stepParticles } from "../particle-sim";
 
 function createTestSim(count: number): { state: SimState; params: SimParams } {
 	const R = 0.012;

@@ -1,11 +1,4 @@
-import {
-	boolean,
-	integer,
-	jsonb,
-	pgTable,
-	text,
-	timestamp,
-} from "drizzle-orm/pg-core";
+import { boolean, integer, jsonb, pgTable, text, timestamp } from "drizzle-orm/pg-core";
 import { nanoid } from "nanoid";
 
 export const events = pgTable("events", {
@@ -88,9 +81,7 @@ export const speakers = pgTable("speakers", {
 	photoUrl: text("photo_url"),
 	talkTitle: text("talk_title"),
 	talkDescription: text("talk_description"),
-	talkType: text("talk_type").$type<
-		"keynote" | "workshop" | "panel" | "lightning"
-	>(),
+	talkType: text("talk_type").$type<"keynote" | "workshop" | "panel" | "lightning">(),
 	twitter: text("twitter"),
 	github: text("github"),
 	linkedin: text("linkedin"),
@@ -115,9 +106,7 @@ export const scheduleSessions = pgTable("schedule_sessions", {
 	startTime: timestamp("start_time"),
 	endTime: timestamp("end_time"),
 	location: text("location"),
-	type: text("type").$type<
-		"talk" | "workshop" | "panel" | "break" | "networking"
-	>(),
+	type: text("type").$type<"talk" | "workshop" | "panel" | "break" | "networking">(),
 	streamUrl: text("stream_url"),
 	isLive: boolean("is_live").default(false),
 	sortOrder: integer("sort_order").default(0),
@@ -185,9 +174,7 @@ export const jobs = pgTable("jobs", {
 	description: text("description"),
 	applyUrl: text("apply_url"),
 	location: text("location"),
-	type: text("type").$type<
-		"full-time" | "part-time" | "contract" | "internship"
-	>(),
+	type: text("type").$type<"full-time" | "part-time" | "contract" | "internship">(),
 	isFeatured: boolean("is_featured").default(false),
 	isActive: boolean("is_active").default(true),
 	sortOrder: integer("sort_order").default(0),

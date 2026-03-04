@@ -1,11 +1,11 @@
-import { hexToRgb, pickAccentColor } from "@event-sdk/core";
+import { hexToRgb } from "@event-sdk/core";
+import type { ReactNode } from "react";
 import satori from "satori";
 import sharp from "sharp";
-import type { BadgeGenerateOptions, FontData, GeneratedAsset } from "./types";
 import { DEFAULT_LAYOUT, calculateOptimalFontSize, splitName } from "./layout";
-import { generateQRCode } from "./qr";
 import { ROLE_BADGE_COLORS } from "./presets";
-import type { ReactNode } from "react";
+import { generateQRCode } from "./qr";
+import type { BadgeGenerateOptions, FontData, GeneratedAsset } from "./types";
 
 function formatBadgeNumber(num: number, format = "###"): string {
 	const digits = format.length;
@@ -21,8 +21,7 @@ async function loadGoogleFont(family: string, weight: number): Promise<Buffer> {
 	const url = `https://fonts.googleapis.com/css2?family=${encodeURIComponent(family)}:wght@${weight}&display=swap`;
 	const css = await fetch(url, {
 		headers: {
-			"User-Agent":
-				"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36",
+			"User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36",
 		},
 	}).then((r) => r.text());
 
@@ -76,7 +75,13 @@ function buildBadgeSVGElement(
 		identity.roles.find((r) => r.id === attendee.role)?.displayName ??
 		attendee.organization ??
 		attendee.role;
-	const roleResult = calculateOptimalFontSize(roleDisplayName.toUpperCase(), 40, 30, maxTextWidth, letterSpacing);
+	const roleResult = calculateOptimalFontSize(
+		roleDisplayName.toUpperCase(),
+		40,
+		30,
+		maxTextWidth,
+		letterSpacing,
+	);
 
 	const fontFamily = brand.fonts.display.family;
 	const monoFamily = brand.fonts.mono?.family ?? fontFamily;

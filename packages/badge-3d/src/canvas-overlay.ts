@@ -45,7 +45,8 @@ export function drawOverlay(
 	ctx.fillStyle = "#ffffff";
 	ctx.font = "bold 42px sans-serif";
 	const headline = identity.tagline ?? `I'M AT ${identity.name.toUpperCase()}`;
-	const headlineLines = headline.length > 20 ? [headline.slice(0, 20), headline.slice(20)] : [headline];
+	const headlineLines =
+		headline.length > 20 ? [headline.slice(0, 20), headline.slice(20)] : [headline];
 	for (const line of headlineLines) {
 		ctx.fillText(line, left, y);
 		y += 48;
@@ -55,8 +56,15 @@ export function drawOverlay(
 		y += 12;
 		ctx.fillStyle = "rgba(255,255,255,0.6)";
 		ctx.font = "14px sans-serif";
-		const start = identity.dates.start.toLocaleDateString("en-US", { month: "short", day: "numeric" });
-		const end = identity.dates.end.toLocaleDateString("en-US", { month: "short", day: "numeric", year: "numeric" });
+		const start = identity.dates.start.toLocaleDateString("en-US", {
+			month: "short",
+			day: "numeric",
+		});
+		const end = identity.dates.end.toLocaleDateString("en-US", {
+			month: "short",
+			day: "numeric",
+			year: "numeric",
+		});
 		ctx.fillText(`${start} - ${end}`, left, y);
 	}
 

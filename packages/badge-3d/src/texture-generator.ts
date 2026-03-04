@@ -1,4 +1,4 @@
-import { hexToRgb, lighten, pickAccentColor, pickReadableColor } from "@event-sdk/core";
+import { hexToRgb, pickAccentColor, pickReadableColor } from "@event-sdk/core";
 
 export interface CardTextureOptions {
 	name: string;
@@ -57,7 +57,14 @@ export async function generateCardTexture(options: CardTextureOptions): Promise<
 		ctx.fillRect(0, 0, width, height);
 
 		const [r, g, b] = hexToRgb(accent);
-		const grd = ctx.createRadialGradient(width * 0.5, height * 0.3, 0, width * 0.5, height * 0.3, width * 0.6);
+		const grd = ctx.createRadialGradient(
+			width * 0.5,
+			height * 0.3,
+			0,
+			width * 0.5,
+			height * 0.3,
+			width * 0.6,
+		);
 		grd.addColorStop(0, `rgba(${r},${g},${b},0.08)`);
 		grd.addColorStop(1, "transparent");
 		ctx.fillStyle = grd;

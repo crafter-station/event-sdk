@@ -33,6 +33,11 @@ export function Navbar() {
               {t.nav.deck}
             </Link>
           )}
+          {event.features.badges && (
+            <Link href="/badge" className="text-xs text-[var(--muted)] hover:text-white transition-colors">
+              {t.nav.myBadge}
+            </Link>
+          )}
           <button
             type="button"
             onClick={toggleLocale}
@@ -40,6 +45,12 @@ export function Navbar() {
           >
             {locale === "en" ? "ES" : "EN"}
           </button>
+          <Link
+            href="/register"
+            className="rounded-md bg-[var(--accent)] px-4 py-1.5 text-xs font-medium text-[var(--background)] transition-opacity hover:opacity-90"
+          >
+            {t.nav.register}
+          </Link>
         </div>
       </div>
     </nav>

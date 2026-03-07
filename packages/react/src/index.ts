@@ -6,3 +6,5 @@ export { ParticleInput, type ParticleInputProps } from "./particle-input";
 export { ShareButton, type ShareButtonProps } from "./share-button";
 export { WatermarkBanner, type WatermarkBannerProps } from "./watermark-banner";
 export { Badge3DScene, type Badge3DSceneProps } from "./badge-3d-scene";
+export { PosterEditor, type PosterEditorProps, type PosterFormData } from "./poster-editor";
+export { PosterPreview, type PosterPreviewProps } from "./poster-preview";

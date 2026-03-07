@@ -1,0 +1,25 @@
+{
+	"name": "@event-sdk/poster",
+	"version": "0.0.1",
+	"type": "module",
+	"main": "./src/index.ts",
+	"exports": {
+		".": {
+			"bun": "./src/index.ts",
+			"types": "./dist/index.d.ts",
+			"import": "./dist/index.js"
+		}
+	},
+	"scripts": {
+		"build": "tsup",
+		"test": "bun test"
+	},
+	"dependencies": {
+		"@event-sdk/core": "workspace:*",
+		"sharp": "^0.33.0"
+	},
+	"devDependencies": {
+		"tsup": "^8.4.0",
+		"typescript": "^5.8.3"
+	}
+}

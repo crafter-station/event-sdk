@@ -6,6 +6,8 @@ export const en = {
 		schedule: "Schedule",
 		judges: "Judges",
 		jobs: "Jobs",
+		mentors: "Mentors",
+		communityPartners: "Community",
 		faq: "FAQ",
 		deck: "For Sponsors",
 		register: "Register",
@@ -59,6 +61,14 @@ export const en = {
 		label: "The Jury",
 		headline: "Our",
 		headlineAccent: "Judges",
+	},
+	mentors: {
+		label: "Meet the Mentors",
+		headline: "Our",
+		headlineAccent: "Mentors",
+		becomeMentor: "Become a Mentor",
+		area: "Mentoring Area",
+		availability: "Availability",
 	},
 	jobs: {
 		label: "Career Opportunities",
@@ -138,6 +148,11 @@ export const en = {
 		headlineAccent: "Attendees",
 		whatsapp: "Join WhatsApp Group",
 		discord: "Join Discord",
+	},
+	communityPartners: {
+		label: "Community Partners",
+		headline: "Our",
+		headlineAccent: "Community",
 	},
 	footer: {
 		event: "Event",

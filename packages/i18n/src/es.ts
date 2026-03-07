@@ -8,6 +8,8 @@ export const es: Translations = {
 		schedule: "Agenda",
 		judges: "Jueces",
 		jobs: "Empleos",
+		mentors: "Mentores",
+		communityPartners: "Comunidades",
 		faq: "Preguntas",
 		deck: "Para Patrocinadores",
 		register: "Regístrate",
@@ -61,6 +63,14 @@ export const es: Translations = {
 		label: "El Jurado",
 		headline: "Nuestros",
 		headlineAccent: "Jueces",
+	},
+	mentors: {
+		label: "Conoce a los Mentores",
+		headline: "Nuestros",
+		headlineAccent: "Mentores",
+		becomeMentor: "Ser Mentor",
+		area: "Área de Mentoreo",
+		availability: "Disponibilidad",
 	},
 	jobs: {
 		label: "Oportunidades Laborales",
@@ -140,6 +150,11 @@ export const es: Translations = {
 		headlineAccent: "Asistentes",
 		whatsapp: "Unirse al Grupo de WhatsApp",
 		discord: "Unirse al Discord",
+	},
+	communityPartners: {
+		label: "Comunidades Aliadas",
+		headline: "Nuestras",
+		headlineAccent: "Comunidades",
 	},
 	footer: {
 		event: "Evento",

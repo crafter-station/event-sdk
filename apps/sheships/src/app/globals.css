@@ -1,0 +1,78 @@
+@import "tailwindcss";
+@source "../../";
+
+:root {
+	--background: #131414;
+	--foreground: #f2f2ef;
+	--muted: #6b7280;
+	--accent: #e9a1c9;
+	--accent-foreground: #131414;
+	--accent-secondary: #7fe179;
+	--surface: #1e1f1f;
+	--border: #f2f2ef;
+	--radius: 0;
+	--font-display: var(--font-space-grotesk);
+}
+
+body {
+	background: var(--background);
+	color: var(--foreground);
+	font-family: var(--font-space-mono), monospace;
+	-webkit-font-smoothing: antialiased;
+}
+
+a {
+	color: inherit;
+	text-decoration: none;
+}
+
+::selection {
+	background: var(--accent);
+	color: var(--accent-foreground);
+}
+
+html {
+	scroll-behavior: smooth;
+}
+
+.brutalist-border {
+	border: 3px solid var(--border);
+}
+
+.brutalist-shadow {
+	box-shadow: 6px 6px 0px var(--border);
+}
+
+.brutalist-shadow-sm {
+	box-shadow: 4px 4px 0px var(--border);
+}
+
+.brutalist-card {
+	border: 3px solid var(--border);
+	box-shadow: 6px 6px 0px var(--border);
+	transition: all 0.1s ease;
+}
+
+.brutalist-card:hover {
+	transform: translate(2px, 2px);
+	box-shadow: 4px 4px 0px var(--border);
+}
+
+.brutalist-button {
+	border: 3px solid var(--border);
+	box-shadow: 4px 4px 0px var(--border);
+	transition: all 0.1s ease;
+	font-weight: 700;
+	text-transform: uppercase;
+	letter-spacing: 0.05em;
+}
+
+.brutalist-button:hover {
+	transform: translate(1px, 1px);
+	box-shadow: 3px 3px 0px var(--border);
+}
+
+.brutalist-button:active {
+	transform: translate(2px, 2px);
+	box-shadow: 2px 2px 0px var(--border);
+}

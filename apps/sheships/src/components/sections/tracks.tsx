@@ -1,0 +1,44 @@
+"use client";
+
+import { AnimatedGroup } from "@/components/motion/animated-group";
+import { event } from "@/lib/event";
+
+export function Tracks() {
+	const hackathon = event.features.hackathon;
+	if (!hackathon?.enabled || !hackathon.tracks) return null;
+
+	return (
+		<section className="py-20 px-6" id="tracks">
+			<div className="mx-auto max-w-6xl">
+				<div className="text-center mb-12">
+					<p className="font-mono text-xs text-[var(--accent)] tracking-widest uppercase mb-2">
+						Hackathon
+					</p>
+					<h2 className="font-[family-name:var(--font-display)] text-3xl md:text-4xl font-bold">
+						<span className="text-[var(--accent)]">Tracks</span>
+					</h2>
+				</div>
+				<AnimatedGroup
+					preset="blur-slide"
+					triggerOnView
+					className="grid grid-cols-1 sm:grid-cols-3 gap-4"
+				>
+					{hackathon.tracks.map((track) => (
+						<div
+							key={track.slug}
+							className="brutalist-card bg-[var(--surface)] p-6"
+						>
+							<div className="mb-3 flex items-center gap-2">
+								<div className="h-3 w-3 shrink-0" style={{ background: track.color }} />
+								<h3 className="font-medium">{track.name}</h3>
+							</div>
+							{track.description && (
+								<p className="text-sm text-[var(--muted)]">{track.description}</p>
+							)}
+						</div>
+					))}
+				</AnimatedGroup>
+			</div>
+		</section>
+	);
+}

@@ -1,0 +1,30 @@
+{
+	"name": "@event-sdk/sheships",
+	"version": "0.0.1",
+	"private": true,
+	"scripts": {
+		"dev": "next dev --port 3001",
+		"build": "next build",
+		"start": "next start"
+	},
+	"dependencies": {
+		"@event-sdk/core": "workspace:*",
+		"@event-sdk/db": "workspace:*",
+		"@event-sdk/i18n": "workspace:*",
+		"@event-sdk/ui": "workspace:*",
+		"@phosphor-icons/react": "^2.1.10",
+		"geist": "^1.7.0",
+		"motion": "^12.35.0",
+		"next": "^15.2.0",
+		"next-themes": "^0.4.6",
+		"react": "^19.0.0",
+		"react-dom": "^19.0.0"
+	},
+	"devDependencies": {
+		"@types/react": "^19",
+		"@types/react-dom": "^19",
+		"typescript": "^5.8.3",
+		"@tailwindcss/postcss": "^4.1.0",
+		"tailwindcss": "^4.1.0"
+	}
+}

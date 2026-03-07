@@ -1,0 +1,29 @@
+{
+	"name": "@event-sdk/api",
+	"version": "0.0.1",
+	"type": "module",
+	"main": "./src/index.ts",
+	"exports": {
+		".": {
+			"bun": "./src/index.ts",
+			"types": "./dist/index.d.ts",
+			"import": "./dist/index.js"
+		}
+	},
+	"scripts": {
+		"build": "tsup",
+		"test": "bun test"
+	},
+	"dependencies": {
+		"@event-sdk/core": "workspace:*",
+		"@event-sdk/db": "workspace:*",
+		"@event-sdk/badge": "workspace:*"
+	},
+	"peerDependencies": {
+		"@neondatabase/serverless": ">=0.10.0"
+	},
+	"devDependencies": {
+		"tsup": "^8.4.0",
+		"typescript": "^5.8.3"
+	}
+}
